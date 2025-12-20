@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Toko Kerupuk & Basreng – KerupukKu</title>
+  <meta name="description" content="Toko online sederhana untuk jualan basreng, krupuk udang, dan lainnya." />
+  <style>
+    :root{
+      --bg:#f7f7f9; --card:#ffffff; --accent:#ff7043; --muted:#6b7280; --shadow: 0 6px 22px rgba(15,23,42,0.06);
+      Font-family: Inter, ui-sans-serif, system-ui, -apple-system, ‘Segoe UI', Roboto, ‘Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    Body{margin:0;background:var(--bg);color:#111}
+    Header{background:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:10;border-bottom:1px solid #eee}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:46px;height:46px;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;box-shadow:var(--shadow)}
+    H1{font-size:18px;margin:0}
+    Nav{display:flex;gap:12px;align-items:center}
+    .btn{background:var(--accent);color:#fff;padding:8px 12px;border-radius:10px;border:none;cursor:pointer}
+
+    Main{max-width:1100px;margin:28px auto;padding:0 18px}
+    .hero{display:flex;gap:22px;align-items:center;background:#fff;padding:20px;border-radius:14px;box-shadow:var(--shadow)}
+    .hero .left{flex:1}
+    .hero h2{margin:0 0 8px;font-size:22px}
+    .hero p{margin:0;color:var(--muted)}
+    .hero .cta{margin-top:12px}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .card{background:var(--card);padding:14px;border-radius:12px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px}
+    .thumb{height:120px;border-radius:10px;background:#fff7f4;border:1px dashed #ffd8cc;display:flex;align-items:center;justify-content:center;font-size:32px}
+    .price{font-weight:700}
+    .muted{color:var(--muted);font-size:13px}
+
+    Footer{max-width:1100px;margin:22px auto;padding:18px;opacity:0.9;color:var(--muted)}
+    @media (max-width:640px){header{padding:12px} .hero{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">KK</div>
+      <div>
+        <h1>KerupukKu</h1>
+        <div style="font-size:12px;color:var(--muted)">Kerupuk & Basreng – siap antar</div>
+      </div>
+    </div>
+    <nav>
+      <button class="btn" onclick="scrollToProducts()">Lihat Produk</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="left">
+        <h2>Kerupuk renyah, basreng gurih – buat ngemil makin asyik!</h2>
+        <p>Kami menjual basreng, krupuk udang, krupuk bawang, kerupuk ikan, dan berbagai macam camilan khas Indonesia.</p>
+      </div>
+      <div style="width:260px;text-align:center">
+        <!—Banner perusahaan bisa ditambahkan di sini 
+      </div>
+    </section>
+
+    <section style="margin-top:28px">
+      <h3>Profil Perusahaan</h3>
+      <p><strong>Cv KerupukKu</strong> adalah perusahaan camilan tradisional yang berdiri sejak 2020 di Pati. Kami berkomitmen menyediakan kerupuk dan basreng berkualitas tinggi dengan bahan pilihan dan proses produksi higienis. Visi kami adalah menjadi pilihan utama masyarakat Indonesia dalam kategori camilan gurih.</p>
+    </section>
+
+    <section style="margin-top:20px">
+      <h3 id="products">Daftar Produk</h3>
+      <div class="grid">
+        <div class="card">
+          <div class="thumb"><img src="foto\basreng.jpeg" alt="" width="230" height="130"></div>
+          <strong>Basreng Original</strong>
+          <div class="muted">Basreng renyah, pedas sedang.</div>
+         
+        </div>
+        <div class="card">
+          <div class="thumb"><img src="foto\krupuk udang.jpeg" alt="" width="230" height="130"></div>
+          <strong>Krupuk Udang</strong>
+          <div class="muted">Krupuk udang tradisional, gurih.</div>
+         
+        </div>
+        <div class="card">
+          <div class="thumb"><img src="foto\krupuk bawang.jpeg" alt="" width="230" height="130"></div>
+          <strong>Krupuk Bawang</strong>
+          <div class="muted">Rasa bawang yang menggigit.</div>
+         
+        </div>
+        <div class="card">
+          <div class="thumb"><img src="foto\krupuk ikan.jpeg" alt="" width="230" height="130"></div>
+          <strong>Krupuk Ikan</strong>
+          <div class="muted">Krupuk dari ikan pilihan.</div>
+         
+        </div>
+
+        <div class="card">
+            <div class="thumb"><img src="foto\kerupuk emping.jpeg" alt="" width="230" height="130"></div>
+            <strong>Krupuk Emping</strong>
+            <div class="muted">Kerupuk tipis dari biji melinjo, rasanya sedikit pahit dan gurih.</div>
+           
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="foto\Rengginang.jpg" alt="" width="230" height="130"></div>
+            <strong>Krupuk Rengginang</strong>
+            <div class="muted">Kerupuk bulat tebal yang dikeringkan dan digoreng hingga mengembang agar memiliki tekstur yang renyah dan gurih.</div>
+           
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="foto\kerupuk rambak.jpeg" alt="" width="230" height="130"></div>
+            <strong>Krupuk Rambak</strong>
+            <div class="muted">Terbuat dari kulit sapi atau kerbau yang digoreng hingga berwarna kuning keemasan.</div>
+           
+          </div>
+
+          <div class="card">
+            <div class="thumb"><img src="foto\kerupuk kemplang.jpeg" alt="" width="230" height="130"></div>
+            <strong>Krupuk Kemplang</strong>
+            <div class="muted">Kerupuk khas Palembang. beraroma ikan tenggiri, renyah, dan biasa disajikan dengan sambal cuko.</div>
+           
+          </div>
+      </div>
+    </section>
+  </main>
+  
+  <section style="margin-top:28px;display:flex;gap:18px;flex-wrap:wrap">
+      <div style="flex:1;min-width:260px;background:var(--card);padding:14px;border-radius:12px;box-shadow:var(--shadow)">
+        <h4>Info Pengiriman</h4>
+        <p class="muted">Kami menggunakan jasa pengiriman lokal. Ongkir otomatis dihitung saat checkout (fitur contoh ini belum terhubung ke kurir).</p>
+      </div>
+      <div style="flex:1;min-width:260px;background:var(--card);padding:14px;border-radius:12px;box-shadow:var(--shadow)">
+        <h4>Hubungi Kami</h4>
+        <p class="muted">WhatsApp: 0895-0465-8256<br/>Email: admin@kerupukku.example</p>
+      </div>
+    </section>
+
+  <footer>
+    &copy; 2025 KerupukKu
+  </footer>
+
+  <script>
+    function scrollToProducts(){document.getElementById('products').scrollIntoView({behavior:'smooth'});}
+  </script>
+
+</body>
+</html>
